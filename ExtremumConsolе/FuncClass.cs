@@ -4,8 +4,8 @@ namespace First_Task
 {
     public class Func
     {
-        const double golden_ret = 1.618; //золотое сечение
-        String f = "y=(x+1)^3+5x^2";
+        const double ret = 1.618; //золотое сечение
+        
 
 
         double CalcFunc(double x)
@@ -19,8 +19,8 @@ namespace First_Task
             while (Math.Abs(b - a) > e)
             {
 
-                double x1 = b - ((b - a) / golden_ret);
-                double x2 = a + ((b - a) / golden_ret);
+                double x1 = b - ((b - a) / ret);
+                double x2 = a + ((b - a) / ret);
 
                 double y1 = CalcFunc(x1);
                 double y2 = CalcFunc(x2);
@@ -44,8 +44,8 @@ namespace First_Task
             while (Math.Abs(b - a) > e)
             {
 
-                double x1 = b - ((b - a) / golden_ret);
-                double x2 = a + ((b - a) / golden_ret);
+                double x1 = b - ((b - a) / ret);
+                double x2 = a + ((b - a) / ret);
 
                 double y1 = CalcFunc(x1);
                 double y2 = CalcFunc(x2);
@@ -62,9 +62,6 @@ namespace First_Task
             return x;
         }
 
-        public String ToString()
-        {
-            return f;
-        }
+   
     }
 }

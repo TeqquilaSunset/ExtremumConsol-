@@ -8,7 +8,7 @@ namespace First_Task
         {
             Func new_func = new Func();
 
-            Console.WriteLine(new_func.ToString());
+           
             Console.WriteLine("\nПри интервале [-2;2]");
             Console.WriteLine("Точка минимума функции:x=" + new_func.GetExtremumMin(-2, 2, 0.001));
             Console.WriteLine("Точка максимума функции:x=" + new_func.GetExtremumMax(-2, 2, 0.001));
