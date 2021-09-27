@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace First_Task
+namespace ExtremumConsolе
 {
     class Program
     {
@@ -11,16 +11,29 @@ namespace First_Task
 
         static void Main(string[] args)
         {
-            GoldenSection new_func = new GoldenSection();
-            Console.WriteLine("\nПри интервале [-2;2]");
-            Console.WriteLine("Точка минимума функции:x=" + new_func.GetExtremumMin(CalcFunc, -2, 2, 0.001));
-            Console.WriteLine("Точка максимума функции:x=" + new_func.GetExtremumMax(CalcFunc, -2, 2, 0.001));
-            Console.WriteLine("\nПри интервале [-8;8]");
-            Console.WriteLine("Точка минимума функции:x=" + new_func.GetExtremumMin(CalcFunc, 0, 8, 0.001));
-            Console.WriteLine("Точка максимума функции:x=" + new_func.GetExtremumMax(CalcFunc, 0, 8, 0.001));
+            GoldenSection gs = new();
+            Dichotomy dicht = new();
 
-            
 
+            Console.WriteLine("Метод золотого сечния:");
+            Console.WriteLine("Интервал: [-2;2]");
+            Console.WriteLine("Точка минимума функции:x=" + gs.ExtrMin(CalcFunc, -2, 2, 0.001));
+            Console.WriteLine("Точка максимума функции:x=" + gs.ExtrMax(CalcFunc, -2, 2, 0.001));
+            Console.WriteLine("Интервал: [0;8]");
+            Console.WriteLine("Точка минимума функции:x=" + gs.ExtrMin(CalcFunc, 0, 8, 0.001));
+            Console.WriteLine("Точка максимума функции:x=" + gs.ExtrMax(CalcFunc, 0, 8, 0.001));
+
+
+            Console.WriteLine("\nМетод дехотомии:");
+            Console.WriteLine("Интервал: [-2;2]");
+            Console.WriteLine("Точка минимума функции:x=" + dicht.ExtrMin(CalcFunc, -2, 2, 0.001));
+            Console.WriteLine("Точка максимума функции:x=" + dicht.ExtrMax(CalcFunc, -2, 2, 0.001));
+            Console.WriteLine("Интервал: [0;8]");
+            Console.WriteLine("Точка минимума функции:x=" + dicht.ExtrMin(CalcFunc, 0, 8, 0.001));
+            Console.WriteLine("Точка максимума функции:x=" + dicht.ExtrMax(CalcFunc, 0, 8, 0.001));
+
+
+            Console.ReadKey();
         }
     }
 }
